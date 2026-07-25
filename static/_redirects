@@ -1,0 +1,5 @@
+# Proxy rewrite (status 200) so the address bar stays on this domain.
+# Requires this site to be deployed on Netlify — a different host needs
+# a different mechanism (e.g. an nginx proxy_pass or a Cloudflare Worker).
+/wand-launcher/docs    https://wand-launcher-site-docs.netlify.app/         200
+/wand-launcher/docs/*  https://wand-launcher-site-docs.netlify.app/:splat   200

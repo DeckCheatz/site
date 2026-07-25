@@ -1,0 +1,60 @@
+{{ define "main" }}
+    <section class="hero">
+      <div class="wrap hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow">// linux · steamos · steam deck</p>
+          <h1>Run trainers your Steam Deck<br>was never supposed to run.</h1>
+          <p class="lede">DeckCheatz is a small toolchain that brings Windows‑only game trainers to Linux and SteamOS — infinite health, infinite ammo, and every cheat you already know, right on your Deck. No dual boot, no fuss.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="{{ .Site.Params.githubOrg }}" target="_blank" rel="noopener">View on GitHub</a>
+            <a class="btn btn-ghost" href="#toolchain">See how it works</a>
+          </div>
+        </div>
+
+        <div class="hero-hud" aria-hidden="true">
+          <div class="hud-panel">
+            <div class="hud-titlebar">
+              <span class="hud-dot"></span>
+              <span class="hud-title">TRAINER.EXE — v1.02</span>
+              <span class="hud-min">—</span>
+            </div>
+            <ul class="hud-toggles">
+              <li><span>Infinite Health</span><button class="toggle" data-toggle data-delay="120" aria-label="Infinite Health enabled"></button></li>
+              <li><span>Infinite Ammo</span><button class="toggle" data-toggle data-delay="280" aria-label="Infinite Ammo enabled"></button></li>
+              <li><span>Unlock All Items</span><button class="toggle" data-toggle data-delay="440" aria-label="Unlock All Items enabled"></button></li>
+              <li><span>God Mode</span><button class="toggle" data-toggle data-delay="600" aria-label="God Mode enabled"></button></li>
+              <li><span>Super Speed x2</span><button class="toggle" data-toggle data-delay="760" aria-label="Super Speed enabled"></button></li>
+            </ul>
+            <div class="hud-status">
+              <span class="hud-cursor">&gt;</span>
+              <span class="hud-line" id="hud-line"></span><span class="hud-caret">▌</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="what" id="toolchain">
+      <div class="wrap">
+        <h2>The toolchain</h2>
+        <p class="section-sub">From an early script to a native app, and what's coming next.</p>
+        <div class="feature-grid">
+          {{ range (sort (where .Site.RegularPages "Section" "projects") "Params.weight") }}
+          <a class="feature" href="{{ .RelPermalink }}">
+            <p class="feature-tag">{{ .Params.tag }}</p>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.tagline }}</p>
+            <span class="feature-link">Read more →</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="wrap cta-inner">
+        <h2>Fork it. Run it. Cheat with it.</h2>
+        <a class="btn btn-primary btn-lg" href="{{ .Site.Params.githubOrg }}" target="_blank" rel="noopener">github.com/DeckCheatz</a>
+      </div>
+    </section>
+{{ end }}

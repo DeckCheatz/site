@@ -1,0 +1,13 @@
+baseURL = 'https://deckcheatz.app/'
+languageCode = 'en-us'
+title = 'DeckCheatz'
+theme = ''
+
+[params]
+  description = "Run Windows game trainers natively on Linux and SteamOS. No dual boot, no fuss."
+  githubOrg = "https://github.com/DeckCheatz"
+  # TODO: replace with the real invite before going live
+  discord = "https://discord.gg/deckcheatz"
+
+[build]
+  writeStats = true

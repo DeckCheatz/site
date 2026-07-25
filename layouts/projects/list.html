@@ -1,0 +1,25 @@
+{{ define "title" }}Projects — {{ .Site.Title }}{{ end }}
+
+{{ define "main" }}
+    <section class="proj-hero">
+      <div class="wrap">
+        <a class="back-link" href="{{ "/" | relURL }}">← DeckCheatz</a>
+        <p class="eyebrow">// the toolchain</p>
+        <h1>Projects</h1>
+      </div>
+    </section>
+    <section class="what">
+      <div class="wrap">
+        <div class="feature-grid">
+          {{ range (sort .Pages "Params.weight") }}
+          <a class="feature" href="{{ .RelPermalink }}">
+            <p class="feature-tag">{{ .Params.tag }}</p>
+            <h3>{{ .Title }}</h3>
+            <p>{{ .Params.tagline }}</p>
+            <span class="feature-link">Read more →</span>
+          </a>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+{{ end }}
