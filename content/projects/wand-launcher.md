@@ -1,9 +1,9 @@
 ---
 title: "wand-launcher"
-eyebrow: "// legacy · formerly wemod-launcher"
+eyebrow: "// formerly wemod-launcher"
 tagline: "The original approach: a script that ran Wand inside your game's own Steam Play prefix."
 repo: "https://github.com/DeckCheatz/wand-launcher"
-tag: "LEGACY"
+tag: "REWRITE IN PROGRESS"
 weight: 1
 ---
 
@@ -13,4 +13,6 @@ wand-launcher was a small script built to close that gap: it started Wand inside
 
 It was originally called wemod-launcher, back when it only knew how to launch WeMod. The rename came alongside Wand's own rebrand.
 
-This was the first approach, and it's since been superseded by [DeckCheatz](/projects/deckcheatz/) itself — a native implementation rather than a script wrapped around Wand. wand-launcher still lives in the org for reference, and still works if you just want Wand running against a single game with nothing else involved.
+This was the first approach. It's currently being rewritten, and will stay on par with [DeckCheatz](/projects/deckcheatz/) as a simpler option — a native implementation rather than a script wrapped around Wand, for anyone who just wants Wand running against a single game with nothing else involved.
+
+[Read the docs →](/projects/wand-launcher/docs)
